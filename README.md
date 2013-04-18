@@ -22,7 +22,7 @@ var nestedArrayMap = oO.mappable(function(){ return new Array(3); })
 transformedData = oO.data(results)
   .pull(function(d) { return d.time })
   .pull(function(d) { return d.data.browser })
-  .pull(function(d) { return d.data.os })
+  .pull(function(d) { return d.data.os });
   
 
 ```
@@ -41,7 +41,7 @@ We can easily format the data during the transform, as well! So let's make our t
 transformedData = oO.data(results)
   .pull(function(d) { return d.time })
   .pull(function(d) { return d.data.browser })
-  .pull(function(d) { return d.data.os })
+  .pull(function(d) { return d.data.os });
   
 transformedData[0][0] // Wed, 17 Apr 2013 14:50:59 GMT
 ```
