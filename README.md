@@ -19,7 +19,7 @@ var nestedArrayMap = oO.mappable(function(){ return new Array(3); })
   .at(function(d,m) { d[1] = m; })
   .at(function(d,m) { d[2] = m; });
                        
-transformedData = oO.data(results)
+var transformedData = oO.data(results)
   .pull(function(d) { return d.time })
   .pull(function(d) { return d.data.browser })
   .pull(function(d) { return d.data.os });
@@ -38,7 +38,7 @@ Now, `transformedData` looks like this:
 We can easily format the data during the transform, as well! So let's make our time value more readable. 
 
 ```javascript
-transformedData = oO.data(results)
+var transformedData = oO.data(results)
   .pull(function(d) { return d.time })
   .pull(function(d) { return d.data.browser })
   .pull(function(d) { return d.data.os });
