@@ -14,7 +14,7 @@ var results = [{time: "2013-04-17T14:50:59.840Z", data: {browser:'Chrome', os: "
 
 And we want to transform that into a nested array. We want time, browser and os:
 ```javascript
-var nestedArrayMap = oO().mappable(function(){ return new Array(3); })
+var nestedArrayMap = oO.mappable(function(){ return new Array(3); })
   .at(function(d,m) { d[0] = m; })
   .at(function(d,m) { d[1] = m; })
   .at(function(d,m) { d[2] = m; });
